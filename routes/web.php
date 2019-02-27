@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //post view
 Route::get('/post', 'postController@allpost');
+
+//vue routing
+Route::get('/{anypath}', 'HomeController@index')->where('path','.*');
