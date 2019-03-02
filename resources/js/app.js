@@ -10,37 +10,36 @@ require('./bootstrap');
 window.Vue = require('vue');
 //Vue Router
 import VueRouter from 'vue-router'
-
 Vue.use(VueRouter)
-
 import {routes} from "./routs";
-
 const router = new VueRouter({
     routes, // short for `routes: routes`
     mode: 'history'
 })
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+//Vue X
+import Vuex from 'vuex'
+Vue.use(Vuex)
+import storeData from './components/store/index'
+const store = new Vuex.Store(
+    storeData
+)
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('admin-main', require('./components/admin/adminMaster.vue').default);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+
+//Vform Configuration
+import { Form, HasError, AlertError } from 'vform'
+
+
+Vue.component(Form.name, Form)
+Vue.component(HasError.name, HasError)
+Vue.component(AlertError.name, AlertError)
+window.Form = Form;
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    store
 });

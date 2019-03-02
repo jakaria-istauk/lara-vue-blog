@@ -51,10 +51,10 @@
                             </p>
                         </router-link>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <router-link to="/category/list" class="nav-link">
                             <i class="nav-icon fa fa-th"></i>
                             <p>Category</p>
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link to="/post" class="nav-link">
@@ -75,6 +75,16 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1></h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <hr>
         <admin-main></admin-main>
     </div>
     <!-- /.content-wrapper -->

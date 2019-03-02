@@ -22,5 +22,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 //post view
 Route::get('/post', 'postController@allpost');
 
+//Category
+Route::post('/category/add', 'categoryController@addCategory');
+Route::get('/category/get', 'categoryController@getAllCategory');
+Route::get('/category/delete/{id}', 'categoryController@deleteCategory');
+
 //vue routing
-Route::get('/{anypath}', 'HomeController@index')->where('path','.*');
+Route::get('/{any}', 'HomeController@index')->where('any','.*');
