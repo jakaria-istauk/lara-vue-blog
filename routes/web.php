@@ -26,6 +26,8 @@ Route::get('/post', 'postController@allpost');
 Route::post('/category/add', 'categoryController@addCategory');
 Route::get('/category/get', 'categoryController@getAllCategory');
 Route::get('/category/delete/{id}', 'categoryController@deleteCategory');
+Route::get('/category/edit/{id}', 'categoryController@editCategory');
+Route::post('/category/update/{id}', 'categoryController@updateCategory');
 
 //vue routing
 Route::get('/{any}', 'HomeController@index')->where('any','.*');

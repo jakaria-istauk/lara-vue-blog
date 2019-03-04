@@ -20,7 +20,8 @@
                                     <td>{{ index+1 }}</td>
                                     <td>{{ category.name }}</td>
                                     <td>
-                                        <a href="#">Edit</a> | <a href="" @click.prevent="deleteCategory(category.id)">Delete</a>
+                                        <router-link :to="`/category/edit/${category.id}`">Edit</router-link> |
+                                        <a href="" @click.prevent="deleteCategory(category.id)">Delete</a>
                                     </td>
                                 </tr>
 
@@ -37,6 +38,7 @@
 
 <script>
     import axios from 'axios'
+    import Toast from 'sweetalert2'
     export default {
         name: "list",
         mounted() {
@@ -53,6 +55,11 @@
                 axios.get('/category/delete/'+id)
                     .then(()=>{
                         this.$store.dispatch("getCategories")
+                        Toast.fire({
+                            type: 'success',
+                            title: 'Category Deleted successfully'
+                        })
+
                     })
             }
         }

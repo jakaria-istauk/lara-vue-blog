@@ -28,4 +28,17 @@ class categoryController extends Controller
         $category = category::find($id);
         $category->delete();
     }
+
+    public function editCategory($id){
+        $category = category::find($id);
+        return response()->json([
+            'category' => $category
+        ], 200);
+    }
+
+    public function updateCategory(Request $request, $id){
+        $category = category::find($id);
+        $category->name = $request->name;
+        $category->save();
+    }
 }

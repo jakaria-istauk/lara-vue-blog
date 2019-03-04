@@ -28,6 +28,15 @@ const store = new Vuex.Store(
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('admin-main', require('./components/admin/adminMaster.vue').default);
 
+// CommonJS
+const Swal = require('sweetalert2')
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000
+});
+window.Toast = Toast;
 
 //Vform Configuration
 import { Form, HasError, AlertError } from 'vform'
