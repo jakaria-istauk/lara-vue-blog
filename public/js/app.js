@@ -41436,7 +41436,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            attrs: { href: "" },
+                            attrs: { href: "#" },
                             on: {
                               click: function($event) {
                                 $event.preventDefault()

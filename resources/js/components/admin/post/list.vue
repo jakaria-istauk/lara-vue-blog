@@ -29,7 +29,7 @@
                                     <td><img :src="post.image" height="100" width="100"></td>
                                     <td>
                                         <a >Edit</a> |
-                                        <a href="" @click.prevent="">Delete</a>
+                                        <a href="#" @click.prevent="">Delete</a>
                                     </td>
                                 </tr>
 

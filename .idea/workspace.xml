@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a69919ef-c588-4a21-bd4a-4d6ea0ca1dcb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/admin/post/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/admin/post/list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/routs.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/routs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/adminMaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/adminMaster.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="a69919ef-c588-4a21-bd4a-4d6ea0ca1dcb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/components/admin/post/list.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+            <state relative-caret-position="283">
+              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -272,7 +263,7 @@
       <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="118" />
     <option name="y" value="-19" />
     <option name="width" value="1346" />
@@ -373,12 +364,12 @@
       <workItem from="1551518213709" duration="9690000" />
       <workItem from="1551677271157" duration="6234000" />
       <workItem from="1551687357795" duration="4483000" />
-      <workItem from="1551761424379" duration="6615000" />
+      <workItem from="1551761424379" duration="6838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63910000" />
+    <option name="totallyTimeSpent" value="64133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -651,8 +642,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/admin/post/list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        <state relative-caret-position="283">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
         </state>
       </provider>
     </entry>
