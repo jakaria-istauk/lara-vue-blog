@@ -17,7 +17,7 @@ export const routes = [
     { path: '/category/edit/:id', component: c_edit },
 
     //post Routes
-    { path: '/post/view', component: allPost },
+    { path: '/post/list', component: allPost },
     { path: '/post/new', component: newPost },
     { path: '/post/edit', component: editPost },
 ]

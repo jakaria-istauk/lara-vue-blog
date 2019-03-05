@@ -2158,8 +2158,59 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "list"
+  name: "list",
+  mounted: function mounted() {
+    return this.$store.dispatch("getAllPosts");
+  },
+  computed: {
+    allPosts: function allPosts() {
+      return this.$store.getters.getAllPosts;
+    }
+  },
+  methods: {}
 });
 
 /***/ }),
@@ -41321,9 +41372,114 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("section", { staticClass: "content" }, [
+    _c("div", { staticClass: "container-fluid" }, [
+      _c("div", { staticClass: "row d-flex justify-content-center" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "card align-content-center" }, [
+            _c(
+              "div",
+              { staticClass: "card-header" },
+              [
+                _c("h3", { staticClass: "card-title float-left" }, [
+                  _vm._v("Post Table")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "btn btn-primary float-right",
+                    attrs: { to: "/post/new" }
+                  },
+                  [_vm._v("Add Post")]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c(
+                "table",
+                { staticClass: "table table-bordered" },
+                [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _vm._l(_vm.allPosts, function(post, index) {
+                    return _c("tr", [
+                      _c("td", [_vm._v(_vm._s(index + 1))]),
+                      _vm._v(" "),
+                      post.user
+                        ? _c("td", [_vm._v(_vm._s(post.user.name))])
+                        : _c("td", [_vm._v("Null")]),
+                      _vm._v(" "),
+                      post.category
+                        ? _c("td", [_vm._v(_vm._s(post.category.name))])
+                        : _c("td", [_vm._v("Null")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(post.title))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(post.description))]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("img", {
+                          attrs: {
+                            src: post.image,
+                            height: "100",
+                            width: "100"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("a", [_vm._v("Edit")]),
+                        _vm._v(" |\n                                    "),
+                        _c(
+                          "a",
+                          {
+                            attrs: { href: "" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                              }
+                            }
+                          },
+                          [_vm._v("Delete")]
+                        )
+                      ])
+                    ])
+                  })
+                ],
+                2
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", [_vm._v("SL")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Author")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Category")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Title")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Description")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Photo")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Action")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -57861,11 +58017,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   state: {
-    category: []
+    category: [],
+    post: []
   },
   getters: {
     getAllCategory: function getAllCategory(state) {
       return state.category;
+    },
+    getAllPosts: function getAllPosts(state) {
+      return state.post;
     }
   },
   actions: {
@@ -57873,11 +58033,20 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/category/get').then(function (res) {
         context.commit('categories', res.data.categories);
       });
+    },
+    getAllPosts: function getAllPosts(context) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/post/get').then(function (response) {
+        console.log(response.data.posts);
+        context.commit('allPosts', response.data.posts);
+      });
     }
   },
   mutations: {
     categories: function categories(state, data) {
       return state.category = data;
+    },
+    allPosts: function allPosts(state, data) {
+      return state.post = data;
     }
   }
 });
@@ -57923,7 +58092,7 @@ var routes = [{
   component: _components_admin_category_edit_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, //post Routes
 {
-  path: '/post/view',
+  path: '/post/list',
   component: _components_admin_post_list_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
   path: '/post/new',

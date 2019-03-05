@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function allpost(){
-        $posts = post::with('category','user')->get();
+    public function getAllPosts(){
+        $posts = post::with('user','category')->get();
 
-        return $posts;
+        return response()->json([
+            'posts' => $posts
+        ], 200);
     }
 }
